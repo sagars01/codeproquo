@@ -1,19 +1,16 @@
-/**
- * Validate if an array is a subsequence of the another array
- */
-
-function isSubsequence(sequence, subsequence) {
+function isValidSubsequence(array, sequence) {
+    // Write your code here.
     let temp = [];
-    sequence.forEach(element => {
-        if (subsequence.indexOf(element) > -1) {
+    array.forEach(element => {
+        if (sequence.indexOf(element) > -1) {
             temp.push(element);
         }
     });
 
     let i = 0;
     let isTrue = true;
-    while (i < subsequence.length) {
-        if (subsequence[i] !== temp[i]) {
+    while (i < sequence.length) {
+        if (sequence[i] !== temp[i]) {
             isTrue = false;
         }
         i++;
@@ -21,6 +18,3 @@ function isSubsequence(sequence, subsequence) {
     console.log(isTrue);
     return isTrue;
 }
-const i1 = [5, 1, 22, 25, 6, -1, 8, 10];
-const i2 = [1, 6, 10 , -1];
-isSubsequence(i1, i2);
