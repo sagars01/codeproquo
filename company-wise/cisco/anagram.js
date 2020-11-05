@@ -36,7 +36,7 @@ function checkAnagram(s1 , s2) {
   
   checkAnagram(123 , "123");
   checkAnagram("abcd" , "a");
-  checkAnagram($^ , "abc");
+  checkAnagram("$^ ", "abc");
   checkAnagram("axcf" , "cfgh");
   checkAnagram(null , null );
   // Test Boundary with large string set;
